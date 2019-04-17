@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #e2e2e2;
+    background-color: #e2e2e2;
+    box-sizing: border-box;
+}
+
+button[type=login] {
+    width: 100%;
+    background-color: #00b241;
+    color: white;
+    padding: 15px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+input[type=login]:hover {
+    background-color: #00b241;
+}
+
+div{
+    background-color: #f2f2f2;
+    padding: 50px;
+}
+
+body{
+    background-color: #00b241;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 45%;
+    left: 47%;
+    margin: -100px 0 0 -150px;
+}
+a:visited {
+    color: #00b241;
+
+}
+.other {
+    font-size: 12px;
+    padding: 12px;
+    text-align: center;
+}
+.websitefont {
+    font-family:'Courier New', Courier, monospace;
+}
+</style>
+<body class="websitefont">
+    <div>
+        <form action="/action_page.php">
+        <input type="text" id="uname"
+        name="username" placeholder="Username">
+
+        <input type="text" id="pword"
+        name="password" placeholder="Password">
+            
+        <button type="login" href="https://i.imgflip.com/gnyfe.jpg"> LOGIN </button>
+
+
+        <div class="other" > 
+            Not Registered? <a href="https://i.imgflip.com/gnyfe.jpg">Create an account</a>
+        </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
