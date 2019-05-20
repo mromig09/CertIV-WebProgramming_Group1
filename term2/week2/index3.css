@@ -8,6 +8,16 @@
     width: 50px;  
     text-align: center;
 }
+#removeButton {
+    color: #000000;
+    font-size: 15px;
+    background-color: #a3a3a3;
+    height: 25px;
+    border-radius: 2px;
+    border: none;
+    width: 50px;  
+    text-align: center;
+}
 
 input[type=text] {
     margin: 10px;
@@ -17,7 +27,7 @@ input[type=text] {
 body{
     position: absolute;
     top: 10%;
-    left:35%;
+    left: 44%;
 }
 
 h1{
@@ -26,3 +36,15 @@ h1{
     font-family: 'Courier New', Courier, monospace;
 }
 
+.delete {
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    left: 94%;
+    background-color: #a3a3a3;
+}
+
+li {
+    margin-bottom: 10px;
+    margin-left: -15px;
+}
