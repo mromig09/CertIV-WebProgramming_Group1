@@ -1,17 +1,6 @@
 var inputField = document.getElementById("inputField");
 var addButton = document.getElementById("addButton");
 
-//button reset field
-/*function clearText(){
-    document.getElementById("addButton").value = "";
-}
-function reset(){
-    var resetButton = document.getElementById("inputField");
-    if(resetButton){
-        resetButton.value= "";
-   }
-}*/
-
 //the list
 var list = document.getElementById("list");
 var removeButton = document.getElementById("removeButton");
@@ -46,6 +35,8 @@ var removeButton = document.getElementById("removeButton");
         newItem.appendChild(document.createTextNode(inputField.value));
         newItem.appendChild(newButton);
         list.appendChild(newItem);
+//input field text reset
+        inputField.value = "";
     }
     
     function myOnClick(){
