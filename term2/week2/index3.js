@@ -1,5 +1,18 @@
 var inputField = document.getElementById("inputField");
 var addButton = document.getElementById("addButton");
+
+//button reset field
+/*function clearText(){
+    document.getElementById("addButton").value = "";
+}
+function reset(){
+    var resetButton = document.getElementById("inputField");
+    if(resetButton){
+        resetButton.value= "";
+   }
+}*/
+
+//the list
 var list = document.getElementById("list");
 var removeButton = document.getElementById("removeButton");
     addButton.onclick = addItems;
@@ -16,6 +29,19 @@ var removeButton = document.getElementById("removeButton");
         newButton.appendChild(document.createTextNode("x"));
         newButton.onclick = myOnClick;
 
+//checkbox and complete color
+        var newListItemCheckbox = document.createElement("input");
+        newListItemCheckbox.setAttribute("type", "checkbox");
+        newItem.appendChild(newListItemCheckbox);
+        newListItemCheckbox.addEventListener("change", function(){
+            console.log(this);
+            if(this.checked){
+                this.parentNode.style.background = "#a3a3a3";
+            }else{
+                this.parentNode.style.background = "#ffff";
+            }
+        })
+
         newItem.setAttribute("id", myNewItemId);
         newItem.appendChild(document.createTextNode(inputField.value));
         newItem.appendChild(newButton);
@@ -23,24 +49,10 @@ var removeButton = document.getElementById("removeButton");
     }
     
     function myOnClick(){
-
         this.parentNode.parentNode.removeChild(this.parentNode);
-        //var elem = document.getElementById('id');
-        //elem.parentNode.removeChild(elem);
         return false;
     }    
 
     function deleteAll(){
-        
         document.getElementById("list").innerHTML = '';
     }
-       
-    
-//function addButtonOnClick(){
-    //alert("Frank died");
-    //var contentToAdd = document.createElement("ul");
-    //contentToAdd.appendChild(document.createTextNode(inputField));
-    //contentHere.appendChild(contentToAdd);
-    
-    
-    //contentHere.innerHTML += "<p>" + inputField.value + "<p>";
